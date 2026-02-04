@@ -1,46 +1,35 @@
-SkolSystem Console App
+🎓 StudentFlow – School Management System
+StudentFlow är en kraftfull konsolapplikation utvecklad i C# och .NET. Systemet är byggt för att centralisera hanteringen av elever, kurser och betyg genom en robust integration med SQL Server via Entity Framework Core. Med ett fokus på stabilitet och användarvänlighet erbjuder StudentFlow en tydlig översikt av skolans administrativa flöden.
 
-📚 SkolSystem är en konsolapplikation byggd i .NET som hanterar elever, kurser och registreringar. Applikationen använder Database First via Entity Framework Core och SQL Server, samt LINQ för rapporter. Den är utvecklad för att ge en stabil och användarvänlig hantering av skoldata.
+🛠 Teknisk Stack
+Språk: C# 11
 
-Funktioner
-📝 Grundläggande funktioner
+Ramverk: .NET 7
 
-Lista alla elever och kurser.
+ORM: Entity Framework Core (Database First)
 
-Registrera elever på kurser.
+Databas: SQL Server
 
-Uppdatera betyg (endast IG eller G).
+Datahantering: LINQ för avancerad filtrering och rapportgenerering
 
-Ta bort elever, inklusive deras kursregistreringar.
+✨ Funktioner
+📋 Administration (CRUD)
+Elevregister: Lista alla elever med unika ID-nummer. Möjlighet att lägga till nya elever eller radera befintliga.
 
-📊 Rapporter
+Smart Radering: Vid borttagning av en elev rensas automatiskt alla tillhörande kursregistreringar för att förhindra databasfel (Foreign Key integrity).
 
-Elever per kurs (visar vilka elever som är registrerade på varje kurs).
+Kursöversikt: Se alla kurser och deras kopplade klassrum.
 
-Möjlighet att enkelt lägga till fler rapporter, t.ex. kurser per elev.
+Registreringsmotor: Registrera elever på kurser med inbyggd kontroll som förhindrar dubbelregistreringar.
 
-⚡ Stabilitet
+Betygshantering: Uppdatera betyg med strikt validering (endast G eller IG).
 
-Validerar användarinput (tomt, fel format, heltal).
+📊 Rapportering
+Elever per kurs: Genererar en visuell rapport som listar varje kurs och tillhörande elever med hjälp av optimerade LINQ-projektioner.
 
-Felhantering med try/catch för att programmet inte ska krascha.
+🛡️ Stabilitet & UX
+Datavalidering: Inbyggda hjälpmetoder (LäsHeltal, LäsBetyg) som säkerställer att användaren anger korrekt data utan att programmet kraschar.
 
-Betyg kan endast sättas till giltiga värden: IG eller G.
+Exception Handling: Global felhantering med try-catch för säkra databasanrop.
 
-🎨 Användarvänlighet
-
-Konsolen använder UTF-8, vilket gör att emojis fungerar för att göra menyn mer visuell.
-
-Tydliga meddelanden vid fel och bekräftelse på utförda operationer.
-
-Teknologi
-
-.NET 7 Console App
-
-C# 11
-
-Entity Framework Core 7 (Database First)
-
-SQL Server (databas)
-
-LINQ för rapportering
+Visuellt UI: Fullt stöd för UTF-8 vilket ger en modern känsla med emojis och tydliga menyer direkt i terminalen.
